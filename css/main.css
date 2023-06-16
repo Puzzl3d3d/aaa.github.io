@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --col-main: #5271FF;
+    --col-secondary: #7e96ff;
+    --col-third: #6b86ff;
+    --col-text: #ffffff;
+}
+
+/* HOME ------------------------------ */
+
+/* Mobile Portrait (Default) */
+body {
+    background-color: var(--col-main);
+    font-family: 'Roboto', sans-serif;
+    color: var(--col-text);
+    margin: 0px;
+    overflow-x:hidden;
+    width: 100%;
+}
+* {
+    overflow-x:hidden;
+}
+.leftNavLink {
+    padding-right: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--col-text);
+}
+.rightNavLink > img {
+    padding-right: 0px;
+    margin: 0px;
+    width: 25px;
+}
+nav {
+    padding: 10px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1 {
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 400;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.row > img{
+    width: 50%;
+}
+.textBlock {
+    width: 100%;
+    height: 100vw;
+    padding-left: 20px;
+    overflow-y: scroll;
+}
+.mainRow > .textBlock {
+    width: 92%;
+}
+.imageBlock {
+    background-color: var(--col-secondary);
+    width: 100%;
+    height: 100vw;
+}
+.images {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    font-weight: 400;
+    font-size: 34px;
+}
+span {
+    font-size: 24px;
+}
+.logo:active {
+    animation: wiggle 1s 1;
+}
+.logo {
+    margin-bottom: 20px;
+    margin: 0 auto;
+    border-radius: 100%;
+}
+.span {
+    font-size: 36px;
+}
+.centerText {
+    text-align: center;
+}
+.contactMe {
+    padding-left: 0px;
+    overflow-y: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+.contactMe > p > a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #CCB1E8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contactMe > p, .contactMe > h2  {
+    padding-left: 0px;
+}
+.findMe {
+    padding-left: 0px;
+    overflow-y: hidden;
+    height: 100%;
+}
+.findMe > h2 {
+    font-size: 46px;
+    margin-top: 10px;
+}
+.line {
+    width: 80%;
+    height: 1px;
+    background-color: var(--col-text);
+
+    margin: 50px auto;
+}
+.googleMapsImage, .googleMaps {
+    width: 100%;
+    border:0px;
+    margin:0px;
+    padding:0px;
+}
+.googleMapsImage {
+    height: 100%;
+    width: 100%;
+}
+.googleMaps {
+    overflow-y: hidden;
+    height: 350px;
+}
+.mainRow > .textBlock > .line {
+    margin-bottom: 0px;
+}
+.contactMe {
+     height: 100%;
+}
+
+/* QUALIFS ----------------------- */
+.qualifsPage {
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.qualifsPage > * {
+    margin: 0 auto;
+    text-align: center;
+}
+.imageIcon {
+    width: 70%;
+    border-radius: 100%;
+    padding-top: 20px;
+}
+.qualifsHeading {
+    padding-top: 20px;
+    font-size: 26px;
+}
+.qualifsP {
+    padding-top: 20px;
+    font-size: 12px;
+}
+.flexColumn {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.flexColumn > img, .flexColumn > .minorRow > img {
+    width: 100%;
+    padding-top: 20px;
+}
+footer {
+    text-align: center;
+    padding-top: 5px;
+}
+.minorRow {
+    width: 100%;
+    height: 100%;
+}
+
+/* SERVICES ---------------------- */
+.servicesSection > p {
+    font-size: 24px;
+}
+.servicesPage {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.servicesContainer {
+    display: flex;
+    flex-direction: column;
+}
+.servicesSection {
+    border: white 5px solid;
+    border-radius: 10px;
+}
+table {
+    border: white 5px solid;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+td, th {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+tr {
+    height: 40px;
+}
+tr:nth-child(even) {
+    background-color: var(--col-third);
+}
+.bold {
+    font-weight: 700;
+}
+
+/* OTHER SCREEN SIZES */
+
+/* Mobile Landscape */
+@media (min-width: 640px) {
+    .rightNavLink > img {
+        width: 35px;
+    }
+    .imageIcon {
+        width: 40%;
+    }
+    .leftNavLink {
+        padding-right: 10px;
+        font-size: 1.3em;
+    }
+    .logo {
+        width: 60%;
+        padding-bottom: 30px;
+    }
+    h1 {
+        font-size: 1.6em;
+        padding-bottom: 20px;
+    }
+    .mainRow {
+        display: flex;
+        flex-direction: row;
+    }
+    .mainRow:nth-child(2n) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row > img {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .line {
+        display: none;
+    }
+    .mainLine {
+        width: 80%;
+        height: 1px;
+        background-color: var(--col-text);
+    
+        margin: 30px auto;
+    }
+    .imageBlock, .textBlock {
+        height: 50vw;
+        margin: 0;
+        padding: 0;
+    }
+    .imageBlock > * {
+        padding-left: 20px;
+    }
+    .textBlock > * {
+        padding-left: 20px;
+    }
+    .googleMapsImage {
+        width: 100%;
+        border:0;
+        margin:0;
+        padding:0;
+    }
+    .mainRow > .textBlock {
+        width: 100%;
+    }
+
+    /* QUALIFS ----------------------- */
+    .imageIcon {
+        width: 50%;
+    }
+    .qualifsHeading {
+        font-size: 36px;
+    }
+    .qualifsP {
+        font-size: 24px;
+    }
+    .minorRow {
+        display: flex;
+        flex-direction: row;
+    }
+}
+/* Tablet Portrait */
+@media (min-width: 768px) {
+    .rightNavLink > img {
+        width: 40px;
+    }
+    .logo {
+        width: 40%;
+    }
+
+    /* QUALIFS ----------------------- */
+    .imageIcon {
+        width: 40%;
+    }
+    .qualifsHeading {
+        font-size: 48px;
+    }
+    .qualifsP {
+        font-size: 28px;
+    }
+}
+/* Tablet Landscape */
+@media (min-width: 1024px) {
+    .leftNavLink {
+        font-size: 1.7em;
+        padding-left: 15px;
+    }
+    .rightNavLink > img {
+        font-size: 1.7em;
+        width: 50px;
+    }
+    .row {
+        flex-direction: row;
+    }
+    .textBlock > p {
+        font-size: 26px;
+    }
+    .textBlock > p > span {
+        font-size: 36px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    table {
+        width: 60%;
+    }
+}
+/* Desktop */
+@media (min-width: 1440px) {
+    .logo {
+        width: 25%;
+    }
+    .leftNavLink {
+        font-size: 3rem;
+    }
+    .rightNavLink > img {
+        width: 80px;
+    }
+    h1 {
+        padding-top: 5px;
+        font-size: 36px;
+    }
+    .textBlock > p {
+        font-size: 24px;
+    }
+    .textBlock > p > span {
+        font-size: 30px;
+        padding-bottom: 8px;
+    }
+    .images {
+        padding: 70px;
+    }
+    h2 {
+        font-size: 46px;
+    }
+    .findMe > h2 {
+        font-size: 100px;
+    }
+    .googleMaps {
+        height: 500px;
+    }
+    .extras {
+        overflow-y: hidden;
+    }
+    .extras > p {
+        font-size: 36px;
+        padding-left: 50px;
+        padding-top: 50px;
+    }
+    .extras > p > span {
+        font-size: 42px;
+    }
+    .contactMe > h2 {
+        font-size: 72px;
+        padding-top: 40px;
+    }
+    .contactMe > p {
+        font-size: 36px;
+    }
+
+    /* QUALIFS ----------------------- */
+    .imageIcon {
+        width: 30%;
+    }
+    .qualifsHeading {
+        font-size: 60px;
+    }
+    .qualifsP {
+        font-size: 26px;
+    }
+    .flexColumn > img, .minorRow > img {
+        width: 48%;
+        padding-top: 20px;
+    }
+    .minorRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    footer > p {
+        font-size: 36px;
+    }
+}
+/* Smaller Phone Screens */
+@media (max-width: 420px) {
+    .leftNavLink {
+        font-size: 12px;
+        padding-right: 3px;
+    }
+    .rightNavLink > img {
+        width: 20px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+}
+
+
+
+/* ANIMS */
+@keyframes wiggle {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-50deg); }
+    50%  { transform: rotate(50deg); }
+    75%  { transform: rotate(-50deg); }
+    100% { transform: rotate(0deg); }
+}

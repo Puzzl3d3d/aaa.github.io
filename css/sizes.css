@@ -1,0 +1,19 @@
+
+/* Tablets */
+
+/* Horizonal */
+@media (min-width: 1024px) {}
+/* Vertically */
+@media (min-width: 768px) {}
+
+
+/* Mobile */
+
+/* Horizonal */
+@media (min-width: 640px) {}
+/* Vertically */
+@media (max-width: 480px) {}
+
+
+/* Desktop */
+@media (min-width: 1440px) {}
