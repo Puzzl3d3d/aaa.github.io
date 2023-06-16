@@ -7,6 +7,22 @@
     --col-text: #ffffff;
 }
 
+/* Selection and dragging */
+img, p, a {
+    user-select: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.select {
+    user-select: text;
+}
+.contactMe > p, .contactMe > p > a {
+    user-select: text;
+}
+
 /* HOME ------------------------------ */
 
 /* Mobile Portrait (Default) */
