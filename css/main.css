@@ -450,6 +450,18 @@ tr:nth-child(even) {
     footer > p {
         font-size: 36px;
     }
+
+    /* SERVICES ---------------------- */
+    .servicesSection {
+        width: calc(50% - 20px);
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .servicesContainer {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 /* Smaller Phone Screens */
 @media (max-width: 420px) {
