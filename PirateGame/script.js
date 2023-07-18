@@ -1,6 +1,7 @@
 var generateButton = document.getElementById("generate")
 var previousList = document.getElementById("previous")
 var table = document.getElementById("squares")
+var last = document.getElementById("last")
 
 var lastSelectedColor = "rgb(0, 200, 255)"
 var selectedColor = "rgb(200, 200, 255)"
@@ -48,6 +49,8 @@ function newSquare(square) {
     }
 
     tableItem.style.backgroundColor = lastSelectedColor
+
+    last.innerHTML = square
 }
 function generate() {
     if (squares.length == 7 * 7) { return }
@@ -85,18 +88,27 @@ function undo() {
     lastSquare.remove();
     squares.pop();
 
+    if (squares.length == 0) { 
+        for (let i = 0; i < 7; i++) {
+            for (let j = 0; j < 7; j++) {
+                let item = table.children[i].children[j]
+                item.style = ""
+            }
+        }
+        last.innerHTML = "No square selected yet"
+        return
+    }
+
     let nextLastSquare = previousList.lastChild
 
-    console.log(square)
+    last.innerHTML = nextLastSquare.innerHTML
 
     for (let i = 0; i < 7; i++) {
         for (let j = 0; j < 7; j++) {
             let item = table.children[i].children[j]
             if (item.innerHTML == square) {
-                console.log("Set", item, "to blank",item.innerHTML, square)
                 item.style = ""
             } else if (item.innerHTML == nextLastSquare.innerHTML) {
-                console.log("Set", item, "to lastSelectedColor",item.innerHTML, nextLastSquare.innerHTML)
                 item.style.backgroundColor = lastSelectedColor
             }
         }
